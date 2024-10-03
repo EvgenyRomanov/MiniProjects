@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Infrastructure\Events;
+namespace App\Infrastructure\Events;
 
-use app\src\Infrastructure\QueryResult\DatabaseQueryResult;
+use App\Infrastructure\QueryResult\DatabaseQueryResult;
 
 class Event
 {

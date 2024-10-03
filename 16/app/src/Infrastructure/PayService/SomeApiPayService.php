@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\PayService;
+namespace App\Infrastructure\PayService;
 
 class SomeApiPayService implements SomeApiPayServiceInterface
 {

@@ -2,8 +2,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use app\src\EventSystem;
-use app\src\Storage\RedisStorage;
+use App\EventSystem;
+use App\Storage\RedisStorage;
 
 try {
     $storage = new RedisStorage($_ENV['REDIS_HOST'], $_ENV['INDEX_NAME']);

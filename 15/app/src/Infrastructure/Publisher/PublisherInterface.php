@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Infrastructure\Publisher;
+namespace App\Infrastructure\Publisher;
 
-use app\src\Infrastructure\Events\Event;
-use app\src\Infrastructure\Subscriber\SubscriberInterface;
+use App\Infrastructure\Events\Event;
+use App\Infrastructure\Subscriber\SubscriberInterface;
 
 interface PublisherInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\tests\Repository;
+namespace Tests\Repository;
 
-use app\src\Infrastructure\Repository\SomeRepositoryInterface;
+use App\Infrastructure\Repository\SomeRepositoryInterface;
 
 class DummyRepositoryPositive implements SomeRepositoryInterface
 {

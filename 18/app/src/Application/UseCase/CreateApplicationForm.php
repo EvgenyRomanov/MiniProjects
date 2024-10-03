@@ -1,13 +1,13 @@
 <?php
 
-namespace app\src\Application\UseCase;
+namespace App\Application\UseCase;
 
-use app\src\Application\UseCase\Request\CreateApplicationFormRequest;
-use app\src\Application\UseCase\Response\CreateApplicationFormResponse;
-use app\src\Domain\Entity\ApplicationForm;
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Domain\ValueObject\Email;
-use app\src\Domain\ValueObject\Message;
+use App\Application\UseCase\Request\CreateApplicationFormRequest;
+use App\Application\UseCase\Response\CreateApplicationFormResponse;
+use App\Domain\Entity\ApplicationForm;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Domain\ValueObject\Email;
+use App\Domain\ValueObject\Message;
 use Exception;
 
 class CreateApplicationForm

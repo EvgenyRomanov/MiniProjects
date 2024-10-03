@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Application\UseCase\Response;
+namespace App\Application\UseCase\Response;
 
 class CreateApplicationFormResponse
 {

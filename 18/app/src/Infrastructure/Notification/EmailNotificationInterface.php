@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\Notification;
+namespace App\Infrastructure\Notification;
 
 interface EmailNotificationInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Application\UseCase;
+namespace App\Application\UseCase;
 
-use app\src\Application\UseCase\AbstractSearch;
+use App\Application\UseCase\AbstractSearch;
 
 class SearchByTitleCategory extends AbstractSearch
 {

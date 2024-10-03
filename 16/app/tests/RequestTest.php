@@ -1,14 +1,14 @@
 <?php
 
-namespace app\tests;
+namespace Tests;
 
-use app\src\Infrastructure\Exception\CardExpirationException;
-use app\src\Infrastructure\Exception\CardHolderException;
-use app\src\Infrastructure\Exception\CardNumberException;
-use app\src\Infrastructure\Exception\CvvException;
-use app\src\Infrastructure\Exception\OrderNumberException;
-use app\src\Infrastructure\Exception\SumException;
-use app\src\Infrastructure\Request\Request;
+use App\Infrastructure\Exception\CardExpirationException;
+use App\Infrastructure\Exception\CardHolderException;
+use App\Infrastructure\Exception\CardNumberException;
+use App\Infrastructure\Exception\CvvException;
+use App\Infrastructure\Exception\OrderNumberException;
+use App\Infrastructure\Exception\SumException;
+use App\Infrastructure\Request\Request;
 use PHPUnit\Framework\TestCase;
 
 class RequestTest extends TestCase

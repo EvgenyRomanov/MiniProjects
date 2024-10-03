@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Application\UseCase;
+namespace App\Application\UseCase;
 
-use app\src\Application\UseCase\AbstractSearch;
-use app\src\Domain\Repository\BookRepositoryInterface;
+use App\Application\UseCase\AbstractSearch;
+use App\Domain\Repository\BookRepositoryInterface;
 
 class SearchByTitle extends AbstractSearch
 {

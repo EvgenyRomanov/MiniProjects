@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\QueryResult;
+namespace App\Infrastructure\QueryResult;
 
-use app\src\Infrastructure\Events\DatabaseQueryResultIsCreated;
-use app\src\Infrastructure\Events\SqlIsExecuted;
-use app\src\Infrastructure\Publisher\PublisherInterface;
-use app\src\Infrastructure\Repository\Db;
+use App\Infrastructure\Events\DatabaseQueryResultIsCreated;
+use App\Infrastructure\Events\SqlIsExecuted;
+use App\Infrastructure\Publisher\PublisherInterface;
+use App\Infrastructure\Repository\Db;
 use Exception;
 
 class DatabaseQueryResult implements \Iterator

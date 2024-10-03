@@ -4,7 +4,7 @@
  * Класс хранилища Redis
  */
 
-namespace app\src\Storage;
+namespace App\Storage;
 
 use Ehann\RediSearch\{AbstractIndex, Index};
 use Ehann\RedisRaw\{RedisClientAdapter, RedisRawClientInterface};

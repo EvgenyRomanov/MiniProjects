@@ -1,10 +1,10 @@
 <?php
 
-namespace app\src\Infrastructure\DataMapper;
+namespace App\Infrastructure\DataMapper;
 
-use app\src\Domain\Entity\Status;
-use app\src\Domain\ValueObject\Name;
-use app\src\Infrastructure\Db\Db;
+use App\Domain\Entity\Status;
+use App\Domain\ValueObject\Name;
+use App\Infrastructure\Db\Db;
 use Exception;
 use PDO;
 use PDOStatement;

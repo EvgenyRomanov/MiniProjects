@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Application\UseCase;
+namespace App\Application\UseCase;
 
-use app\src\Domain\Repository\BookRepositoryInterface;
+use App\Domain\Repository\BookRepositoryInterface;
 
 abstract class AbstractSearch
 {

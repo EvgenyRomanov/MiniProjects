@@ -9,9 +9,9 @@ namespace src;
 class SolutionTask1
 {
     /**
-     * @param \app\src\ListNode $headA
-     * @param \app\src\ListNode $headB
-     * @return \app\src\ListNode|null
+     * @param App\ListNode $headA
+     * @param App\ListNode $headB
+     * @return App\ListNode|null
      */
     public function getIntersectionNode(ListNode $headA, ListNode $headB): ?ListNode
     {

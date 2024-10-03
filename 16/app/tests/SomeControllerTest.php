@@ -1,18 +1,18 @@
 <?php
 
-namespace app\tests;
+namespace Tests;
 
-use app\src\Infrastructure\Controllers\SomeController;
-use app\src\Infrastructure\PayService\SomeApiPayServiceInterface;
-use app\src\Infrastructure\Repository\SomeRepositoryInterface;
-use app\src\Infrastructure\Request\Request;
-use app\src\Infrastructure\Request\RequestInterface;
-use app\src\Infrastructure\Response\Response;
-use app\src\Infrastructure\Response\ResponseInterface;
-use app\tests\PayService\DummyPayServiceNegative;
-use app\tests\PayService\DummyPayServicePositive;
-use app\tests\Repository\DummyRepositoryNegative;
-use app\tests\Repository\DummyRepositoryPositive;
+use App\Infrastructure\Controllers\SomeController;
+use App\Infrastructure\PayService\SomeApiPayServiceInterface;
+use App\Infrastructure\Repository\SomeRepositoryInterface;
+use App\Infrastructure\Request\Request;
+use App\Infrastructure\Request\RequestInterface;
+use App\Infrastructure\Response\Response;
+use App\Infrastructure\Response\ResponseInterface;
+use Tests\PayService\DummyPayServiceNegative;
+use Tests\PayService\DummyPayServicePositive;
+use Tests\Repository\DummyRepositoryNegative;
+use Tests\Repository\DummyRepositoryPositive;
 use PHPUnit\Framework\TestCase;
 
 class SomeControllerTest extends TestCase

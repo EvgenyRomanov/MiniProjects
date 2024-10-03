@@ -5,7 +5,7 @@
  * чтобы было легко поменять тип хранилища в клиентском коде.
  */
 
-namespace app\src\Storage;
+namespace App\Storage;
 
 use Exception;
 

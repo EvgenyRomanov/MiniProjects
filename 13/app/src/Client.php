@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src;
+namespace App;
 
 class Client extends ActiveRecordEntity
 {

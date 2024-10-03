@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Infrastructure\Http;
+namespace App\Infrastructure\Http;
 
-use app\src\Domain\Repository\ApplicationFormInterface;
+use App\Domain\Repository\ApplicationFormInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

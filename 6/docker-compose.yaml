@@ -6,9 +6,9 @@ services:
       context: ./.docker/fpm
       dockerfile: Dockerfile
     image: myapp/app
-    container_name: app
+    container_name: app6
     volumes:
-      - .:/data
+      - ./app:/data
     networks:
       - app-network
     restart: always

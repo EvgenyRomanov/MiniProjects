@@ -1,10 +1,10 @@
 <?php
 
-namespace app\src\Infrastructure\QueryBuilder;
+namespace App\Infrastructure\QueryBuilder;
 
-use app\src\Infrastructure\Publisher\PublisherInterface;
-use app\src\Infrastructure\QueryResult\DatabaseQueryResult;
-use app\src\Infrastructure\QueryResult\DatabaseQueryResultProxy;
+use App\Infrastructure\Publisher\PublisherInterface;
+use App\Infrastructure\QueryResult\DatabaseQueryResult;
+use App\Infrastructure\QueryResult\DatabaseQueryResultProxy;
 use Exception;
 
 class SelectQueryBuilder

@@ -1,13 +1,13 @@
 <?php
 
-namespace app\src\Infrastructure\Repository;
+namespace App\Infrastructure\Repository;
 
 use Exception;
 use PDO;
 
 class Db
 {
-    /** @var \app\src\Infrastructure\Repository\Db */
+    /** @var \App\Infrastructure\Repository\Db */
     private static $instance;
 
     /** @var PDO */

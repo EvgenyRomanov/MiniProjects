@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\Exception;
+namespace App\Infrastructure\Exception;
 
 class CvvException extends \Exception
 {

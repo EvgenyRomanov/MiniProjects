@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Domain\Entity;
+namespace App\Domain\Entity;
 
-use app\src\Domain\ValueObject\Email;
-use app\src\Domain\ValueObject\Message;
+use App\Domain\ValueObject\Email;
+use App\Domain\ValueObject\Message;
 
 class ApplicationForm
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\Queues\Publisher;
+namespace App\Infrastructure\Queues\Publisher;
 
 use Bunny\Channel;
 use Bunny\Client;

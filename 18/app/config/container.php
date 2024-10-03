@@ -1,11 +1,11 @@
 <?php
 
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Infrastructure\Notification\EmailEmailNotification;
-use app\src\Infrastructure\Notification\EmailNotificationInterface;
-use app\src\Infrastructure\Queues\Publisher\PublisherInterface;
-use app\src\Infrastructure\Queues\Publisher\RabbitMQPublisher;
-use app\src\Infrastructure\Repository\DbRepository;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Infrastructure\Notification\EmailEmailNotification;
+use App\Infrastructure\Notification\EmailNotificationInterface;
+use App\Infrastructure\Queues\Publisher\PublisherInterface;
+use App\Infrastructure\Queues\Publisher\RabbitMQPublisher;
+use App\Infrastructure\Repository\DbRepository;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Slim\App;

@@ -2,14 +2,14 @@
 
 /** https://leetcode.com/problems/linked-list-cycle/ */
 
-namespace app\src;
+namespace App;
 
 use src\ListNode;
 
 class Solution1
 {
     /**
-     * @param \app\src\ListNode $head
+     * @param \App\ListNode $head
      * @return Boolean
      */
     public function hasCycle(ListNode $head): bool

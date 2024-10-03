@@ -1,12 +1,12 @@
 <?php
 
-namespace app\src\Infrastructure\Http;
+namespace App\Infrastructure\Http;
 
-use app\src\Application\UseCase\CreateApplicationForm;
-use app\src\Application\UseCase\Request\CreateApplicationFormRequest;
-use app\src\Exception\PublishException;
-use app\src\Infrastructure\Notification\EmailNotificationInterface;
-use app\src\Infrastructure\Queues\Publisher\PublisherInterface;
+use App\Application\UseCase\CreateApplicationForm;
+use App\Application\UseCase\Request\CreateApplicationFormRequest;
+use App\Exception\PublishException;
+use App\Infrastructure\Notification\EmailNotificationInterface;
+use App\Infrastructure\Queues\Publisher\PublisherInterface;
 use Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

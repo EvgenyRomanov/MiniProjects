@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src;
+namespace App;
 
 /**
  * Definition for a singly-linked list

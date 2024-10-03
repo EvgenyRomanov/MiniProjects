@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\Controllers;
+namespace App\Infrastructure\Controllers;
 
-use app\src\Infrastructure\PayService\SomeApiPayServiceInterface;
-use app\src\Infrastructure\Repository\SomeRepositoryInterface;
-use app\src\Infrastructure\Request\Request;
-use app\src\Infrastructure\Response\Response;
+use App\Infrastructure\PayService\SomeApiPayServiceInterface;
+use App\Infrastructure\Repository\SomeRepositoryInterface;
+use App\Infrastructure\Request\Request;
+use App\Infrastructure\Response\Response;
 
 class SomeController
 {

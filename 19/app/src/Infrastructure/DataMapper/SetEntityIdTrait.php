@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\DataMapper;
+namespace App\Infrastructure\DataMapper;
 
 use ReflectionClass;
 use ReflectionException;

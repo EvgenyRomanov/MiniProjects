@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Application\UseCase\Request;
+namespace App\Application\UseCase\Request;
 
 class CreateApplicationFormRequest
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace app\src\Infrastructure\Repository;
+namespace App\Infrastructure\Repository;
 
-use app\src\Domain\Entity\ApplicationForm;
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Infrastructure\DataMapper\ApplicationFormMapper;
+use App\Domain\Entity\ApplicationForm;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Infrastructure\DataMapper\ApplicationFormMapper;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Exception;

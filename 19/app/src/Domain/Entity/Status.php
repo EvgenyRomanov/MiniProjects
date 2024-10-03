@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Domain\Entity;
+namespace App\Domain\Entity;
 
-use app\src\Domain\ValueObject\Name;
+use App\Domain\ValueObject\Name;
 
 class Status
 {

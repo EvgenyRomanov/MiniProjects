@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Infrastructure\Subscriber;
+namespace App\Infrastructure\Subscriber;
 
-use app\src\Infrastructure\Events\Event;
+use App\Infrastructure\Events\Event;
 
 interface SubscriberInterface
 {

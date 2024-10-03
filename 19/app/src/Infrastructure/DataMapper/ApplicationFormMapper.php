@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\DataMapper;
+namespace App\Infrastructure\DataMapper;
 
-use app\src\Domain\Entity\ApplicationForm;
-use app\src\Domain\ValueObject\Email;
-use app\src\Domain\ValueObject\Message;
-use app\src\Infrastructure\Db\Db;
+use App\Domain\Entity\ApplicationForm;
+use App\Domain\ValueObject\Email;
+use App\Domain\ValueObject\Message;
+use App\Infrastructure\Db\Db;
 use Exception;
 use PDO;
 use PDOStatement;

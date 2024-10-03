@@ -1,24 +1,15 @@
 <?php
 
-namespace app;
+namespace App;
 
 use CurlHandle;
 
-class App
+class VerificationEmail
 {
-    /** @var string  */
     protected string $api;
-
-    /** @var CurlHandle|bool  */
     protected bool|CurlHandle $curl;
-
-    /** @var string  */
     protected string $method;
-
-    /** @var null|string  */
     protected ?string $apiKey;
-
-    /** @var string  */
     protected string $contentType;
 
     public function __construct(
@@ -38,10 +29,6 @@ class App
         curl_close($this->curl);
     }
 
-    /**
-     * @param array $list
-     * @return array
-     */
     public function validateEmails(array $list): array
     {
         return array_filter($list, function ($item) {
@@ -52,8 +39,6 @@ class App
 
     /**
      * @see https://siterelic.com/docs#getting-started
-     * @param string $email
-     * @return bool
      */
     protected function checkMXRecord(string $email): bool
     {
@@ -71,13 +56,6 @@ class App
         return false;
     }
 
-    /**
-     * //TODO Этот метод можно развивать дальше, сделать расширяемым для других API
-     *
-     * @param CurlHandle $curl
-     * @param array $data
-     * @return void
-     */
     protected function curlSetOpt(CurlHandle $curl, array $data): void
     {
         $payload = json_encode($data, JSON_UNESCAPED_UNICODE);
@@ -95,74 +73,46 @@ class App
         );
     }
 
-    /**
-     * @param CurlHandle $curl
-     * @return array
-     */
     protected function curlExec(CurlHandle $curl): array
     {
         return json_decode(curl_exec($curl), true);
     }
 
-    /**
-     * @return string
-     */
     public function getApi(): string
     {
         return $this->api;
     }
 
-    /**
-     * @param string $api
-     */
     public function setApi(string $api): void
     {
         $this->api = $api;
     }
 
-    /**
-     * @param string $method
-     */
     public function setMethod(string $method): void
     {
         $this->method = $method;
     }
 
-    /**
-     * @return string
-     */
     public function getMethod(): string
     {
         return $this->method;
     }
 
-    /**
-     * @return string|null
-     */
     public function getApiKey(): ?string
     {
         return $this->apiKey;
     }
 
-    /**
-     * @param string|null $apiKey
-     */
     public function setApiKey(?string $apiKey): void
     {
         $this->apiKey = $apiKey;
     }
 
-    /**
-     * @param string $contentType
-     */
     public function setContentType(string $contentType): void
     {
         $this->contentType = $contentType;
     }
 
-    /**
-     * @return string
-     */
     public function getContentType(): string
     {
         return $this->contentType;

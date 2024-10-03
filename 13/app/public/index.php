@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use app\src\Client;
+use App\Client;
 
 try {
     $client = new Client();

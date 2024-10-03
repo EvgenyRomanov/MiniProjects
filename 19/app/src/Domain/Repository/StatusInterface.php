@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Domain\Repository;
+namespace App\Domain\Repository;
 
-use app\src\Domain\Entity\Status;
-use app\src\Domain\ValueObject\Name;
+use App\Domain\Entity\Status;
+use App\Domain\ValueObject\Name;
 
 interface StatusInterface
 {

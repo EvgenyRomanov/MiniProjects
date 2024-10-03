@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\Repository;
+namespace App\Infrastructure\Repository;
 
-use app\src\Domain\Entity\Status;
-use app\src\Domain\Repository\StatusInterface;
-use app\src\Domain\ValueObject\Name;
-use app\src\Infrastructure\DataMapper\StatusMapper;
+use App\Domain\Entity\Status;
+use App\Domain\Repository\StatusInterface;
+use App\Domain\ValueObject\Name;
+use App\Infrastructure\DataMapper\StatusMapper;
 use Exception;
 
 class RepositoryStatusDb implements StatusInterface

@@ -1,10 +1,10 @@
 <?php
 
-use app\src\Infrastructure\DataMapper\{StatusMapper};
-use app\src\Infrastructure\DataMapper\ApplicationFormMapper;
-use app\src\Infrastructure\Queues\Consumer\RabbitMQConsumer;
-use app\src\Infrastructure\Repository\RepositoryApplicationFormDb;
-use app\src\Infrastructure\Repository\RepositoryStatusDb;
+use App\Infrastructure\DataMapper\{StatusMapper};
+use App\Infrastructure\DataMapper\ApplicationFormMapper;
+use App\Infrastructure\Queues\Consumer\RabbitMQConsumer;
+use App\Infrastructure\Repository\RepositoryApplicationFormDb;
+use App\Infrastructure\Repository\RepositoryStatusDb;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 

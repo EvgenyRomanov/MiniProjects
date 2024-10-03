@@ -1,6 +1,6 @@
 <?php
 
-use app\src\Infrastructure\Queues\Consumer\RabbitMQConsumer;
+use App\Infrastructure\Queues\Consumer\RabbitMQConsumer;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 

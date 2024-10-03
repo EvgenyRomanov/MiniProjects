@@ -1,7 +1,7 @@
 <?php
 
-use app\src\Infrastructure\Http\{GetApplicationFormAction};
-use app\src\Infrastructure\Http\CreateApplicationFormAction;
+use App\Infrastructure\Http\{GetApplicationFormAction};
+use App\Infrastructure\Http\CreateApplicationFormAction;
 use Slim\App;
 
 return function (App $app) {

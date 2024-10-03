@@ -1,12 +1,12 @@
 <?php
 
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Domain\Repository\StatusInterface;
-use app\src\Infrastructure\Db\Db;
-use app\src\Infrastructure\Queues\Publisher\PublisherInterface;
-use app\src\Infrastructure\Queues\Publisher\RabbitMQPublisher;
-use app\src\Infrastructure\Repository\RepositoryApplicationFormDb;
-use app\src\Infrastructure\Repository\RepositoryStatusDb;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Domain\Repository\StatusInterface;
+use App\Infrastructure\Db\Db;
+use App\Infrastructure\Queues\Publisher\PublisherInterface;
+use App\Infrastructure\Queues\Publisher\RabbitMQPublisher;
+use App\Infrastructure\Repository\RepositoryApplicationFormDb;
+use App\Infrastructure\Repository\RepositoryStatusDb;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Slim\App;

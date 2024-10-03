@@ -1,8 +1,8 @@
 <?php
 
-namespace app\src\Domain\Repository;
+namespace App\Domain\Repository;
 
-use app\src\Domain\Entity\ApplicationForm;
+use App\Domain\Entity\ApplicationForm;
 use Doctrine\Common\Collections\Collection;
 
 interface ApplicationFormInterface

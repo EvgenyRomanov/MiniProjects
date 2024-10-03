@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\Repository;
+namespace App\Infrastructure\Repository;
 
-use app\src\Domain\Entity\ApplicationForm;
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Domain\ValueObject\Email;
-use app\src\Domain\ValueObject\Message;
+use App\Domain\Entity\ApplicationForm;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Domain\ValueObject\Email;
+use App\Domain\ValueObject\Message;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use ReflectionClass;

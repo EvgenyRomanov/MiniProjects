@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Infrastructure\Repository;
+namespace App\Infrastructure\Repository;
 
-use app\src\Domain\Entity\Book;
-use app\src\Domain\Repository\BookRepositoryInterface;
+use App\Domain\Entity\Book;
+use App\Domain\Repository\BookRepositoryInterface;
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\ClientBuilder;
 use Exception;

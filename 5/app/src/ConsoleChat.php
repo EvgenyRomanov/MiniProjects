@@ -5,7 +5,7 @@ namespace App;
 use Exception;
 use Socket;
 
-class App
+class ConsoleChat
 {
     protected const SERVER = 'server';
     protected const CLIENT  = 'client';

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Infrastructure\Notification;
+namespace App\Infrastructure\Notification;
 
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\Mailer;

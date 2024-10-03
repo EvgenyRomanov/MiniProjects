@@ -1,8 +1,8 @@
 <?php
 
-namespace app\tests\PayService;
+namespace Tests\PayService;
 
-use app\src\Infrastructure\PayService\SomeApiPayServiceInterface;
+use App\Infrastructure\PayService\SomeApiPayServiceInterface;
 
 class DummyPayServiceNegative implements SomeApiPayServiceInterface
 {

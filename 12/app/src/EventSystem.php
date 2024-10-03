@@ -4,9 +4,9 @@
  * Класс системы событий
  */
 
-namespace app\src;
+namespace App;
 
-use app\src\Storage\Storage;
+use App\Storage\Storage;
 use Exception;
 
 class EventSystem

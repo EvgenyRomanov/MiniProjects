@@ -1,11 +1,11 @@
 <?php
 
-namespace app\src\Infrastructure\Queues\Consumer;
+namespace App\Infrastructure\Queues\Consumer;
 
-use app\src\Domain\Entity\Status;
-use app\src\Domain\Repository\ApplicationFormInterface;
-use app\src\Domain\Repository\StatusInterface;
-use app\src\Domain\ValueObject\Name;
+use App\Domain\Entity\Status;
+use App\Domain\Repository\ApplicationFormInterface;
+use App\Domain\Repository\StatusInterface;
+use App\Domain\ValueObject\Name;
 use Bunny\Channel;
 use Bunny\Client;
 use Bunny\Message;

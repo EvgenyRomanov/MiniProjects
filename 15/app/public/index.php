@@ -2,9 +2,9 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use app\src\Infrastructure\Publisher\Publisher;
-use app\src\Infrastructure\QueryBuilder\SelectQueryBuilder;
-use app\src\Infrastructure\Subscriber\HelperService;
+use App\Infrastructure\Publisher\Publisher;
+use App\Infrastructure\QueryBuilder\SelectQueryBuilder;
+use App\Infrastructure\Subscriber\HelperService;
 
 try {
     $helper = new HelperService();

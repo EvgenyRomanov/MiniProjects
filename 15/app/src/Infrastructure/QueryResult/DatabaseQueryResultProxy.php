@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src\Infrastructure\QueryResult;
+namespace App\Infrastructure\QueryResult;
 
-use app\src\Infrastructure\Events\DatabaseQueryResultIsCreated;
-use app\src\Infrastructure\Repository\Db;
+use App\Infrastructure\Events\DatabaseQueryResultIsCreated;
+use App\Infrastructure\Repository\Db;
 use Exception;
 
 class DatabaseQueryResultProxy extends DatabaseQueryResult

@@ -1,7 +1,6 @@
 CREATE DATABASE IF NOT EXISTS cinema;
 USE cinema;
 
-
 # справочник цен
 CREATE TABLE IF NOT EXISTS prices (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -10,7 +9,6 @@ CREATE TABLE IF NOT EXISTS prices (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
 
-
 # коэффициенты, которые будут влиять на итоговую стоимость в билете
 CREATE TABLE IF NOT EXISTS coefficients (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,7 +16,6 @@ CREATE TABLE IF NOT EXISTS coefficients (
     updated_at TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
-
 
 # типы залов
 CREATE TABLE IF NOT EXISTS type_halls (
@@ -31,7 +28,6 @@ CREATE TABLE IF NOT EXISTS type_halls (
     FOREIGN KEY (coefficient_id) REFERENCES coefficients(id)
 )  ENGINE=INNODB;
 
-
 # схемы залов
 CREATE TABLE IF NOT EXISTS scheme_halls (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -40,7 +36,6 @@ CREATE TABLE IF NOT EXISTS scheme_halls (
     updated_at TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
-
 
 # зоны рассадки
 CREATE TABLE IF NOT EXISTS seating_zones (
@@ -51,7 +46,6 @@ CREATE TABLE IF NOT EXISTS seating_zones (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (coefficient_id) REFERENCES coefficients(id)
 )  ENGINE=INNODB;
-
 
 # рассадка
 CREATE TABLE IF NOT EXISTS seating_arrangements (
@@ -66,7 +60,6 @@ CREATE TABLE IF NOT EXISTS seating_arrangements (
     FOREIGN KEY (scheme_id) REFERENCES scheme_halls(id)
 )  ENGINE=INNODB;
 
-
 # залы
 CREATE TABLE IF NOT EXISTS halls (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -80,7 +73,6 @@ CREATE TABLE IF NOT EXISTS halls (
     FOREIGN KEY (scheme_id) REFERENCES scheme_halls(id)
 )  ENGINE=INNODB;
 
-
 # жанры фильмов
 CREATE TABLE IF NOT EXISTS movie_genres (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -90,7 +82,6 @@ CREATE TABLE IF NOT EXISTS movie_genres (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
 
-
 # категории фильмов
 CREATE TABLE IF NOT EXISTS movie_categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -99,7 +90,6 @@ CREATE TABLE IF NOT EXISTS movie_categories (
     updated_at TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )  ENGINE=INNODB;
-
 
 # фильмы
 CREATE TABLE IF NOT EXISTS `movies` (
@@ -114,7 +104,6 @@ CREATE TABLE IF NOT EXISTS `movies` (
     FOREIGN KEY (category_id) REFERENCES movie_categories(id)
 )  ENGINE=INNODB;
 
-
 # типы сеанса
 CREATE TABLE IF NOT EXISTS type_sessions (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -125,7 +114,6 @@ CREATE TABLE IF NOT EXISTS type_sessions (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (coefficient_id) REFERENCES coefficients(id)
 )  ENGINE=INNODB;
-
 
 # сеансы
 CREATE TABLE IF NOT EXISTS `sessions` (
@@ -141,7 +129,6 @@ CREATE TABLE IF NOT EXISTS `sessions` (
     FOREIGN KEY (movie_id) REFERENCES movies(id),
     FOREIGN KEY (type_id) REFERENCES type_sessions(id)
 )  ENGINE=INNODB;
-
 
 # клиенты
 CREATE TABLE IF NOT EXISTS clients (

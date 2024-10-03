@@ -1,6 +1,6 @@
 <?php
 
-namespace app\src\Domain\ValueObject;
+namespace App\Domain\ValueObject;
 
 use Exception;
 

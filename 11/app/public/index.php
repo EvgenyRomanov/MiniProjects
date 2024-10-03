@@ -2,13 +2,13 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use app\src\Application\UseCase\{
+use App\Application\UseCase\{
     SearchByTitleCategory
 };
-use app\src\Infrastructure\Repository\InElasticSearchBookRepository;
-use app\src\Application\UseCase\SearchByTitle;
-use app\src\Application\UseCase\SearchByTitleCategoryPrice;
-use app\src\Application\UseCase\SearchByTitleCategoryPriceAvailability;
+use App\Infrastructure\Repository\InElasticSearchBookRepository;
+use App\Application\UseCase\SearchByTitle;
+use App\Application\UseCase\SearchByTitleCategoryPrice;
+use App\Application\UseCase\SearchByTitleCategoryPriceAvailability;
 
 try {
     $data = $_ENV['BULK_FILE'];
