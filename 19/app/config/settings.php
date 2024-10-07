@@ -30,4 +30,13 @@ $settings['error'] = [
     'log_error_details' => true,
 ];
 
+$settings['RABBITMQ_DEFAULT_USER'] = $_ENV['RABBITMQ_DEFAULT_USER'];
+$settings['RABBITMQ_DEFAULT_PASS'] = $_ENV['RABBITMQ_DEFAULT_PASS'];
+$settings['QUEUE'] = $_ENV['QUEUE'];
+$settings['MYSQL_PASSWORD'] = $_ENV['MYSQL_PASSWORD'];
+$settings['MYSQL_HOST'] = $_ENV['MYSQL_HOST'];
+$settings['MYSQL_ROOT_HOST'] = $_ENV['MYSQL_ROOT_HOST'];
+$settings['MYSQL_DATABASE'] = $_ENV['MYSQL_DATABASE'];
+$settings['MYSQL_USER'] = $_ENV['MYSQL_USER'];
+
 return $settings;

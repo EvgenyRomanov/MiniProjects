@@ -1,18 +1,13 @@
 <?php
 
-use App\Infrastructure\DataMapper\{StatusMapper};
-use App\Infrastructure\DataMapper\ApplicationFormMapper;
+use Slim\App;
 use App\Infrastructure\Queues\Consumer\RabbitMQConsumer;
-use App\Infrastructure\Repository\RepositoryApplicationFormDb;
-use App\Infrastructure\Repository\RepositoryStatusDb;
 
-require_once __DIR__ . '/../../../../vendor/autoload.php';
+/** @var App $app */
+$app = (require __DIR__ . '/../../../../config/bootstrap.php');
 
 try {
-    $repositoryApplication = new RepositoryApplicationFormDb(new ApplicationFormMapper());
-    $repositoryStatus = new RepositoryStatusDb(new StatusMapper());
-
-    $consumer = new RabbitMQConsumer($repositoryApplication, $repositoryStatus);
+    $consumer = $app->getContainer()->get(RabbitMQConsumer::class);
     $consumer->run();
 } catch (Exception $e) {
     print_r($e->getMessage());

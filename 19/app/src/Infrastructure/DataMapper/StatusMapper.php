@@ -4,7 +4,6 @@ namespace App\Infrastructure\DataMapper;
 
 use App\Domain\Entity\Status;
 use App\Domain\ValueObject\Name;
-use App\Infrastructure\Db\Db;
 use Exception;
 use PDO;
 use PDOStatement;
@@ -29,9 +28,9 @@ class StatusMapper
     /**
      * @throws Exception
      */
-    public function __construct()
+    public function __construct(\PDO $pdo)
     {
-        $this->pdo = Db::getPdo();
+        $this->pdo = $pdo;
 
         $this->selectStmt = $this->pdo->prepare(
             "select name from status where id = ?"

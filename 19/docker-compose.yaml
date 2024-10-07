@@ -1,27 +1,23 @@
 version: '3.8'
 
 services:
-  nginx:
+  nginx19:
     build:
       context: .docker/nginx
       dockerfile: Dockerfile
-    image: hw20/nginx
     restart: always
-    container_name: nginx-hw20
     ports:
       - "80:80"
     volumes:
       - ./app:/data
     depends_on:
-      - app
-      - rabbitmq
+      - app19
+      - rabbitmq19
 
-  app:
+  app19:
     build:
       context: .docker/fpm
       dockerfile: Dockerfile
-    image: hw20/php
-    container_name: php-hw20
     restart: always
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
@@ -34,15 +30,13 @@ services:
     volumes:
       - ./app:/data
     depends_on:
-      - mysql
-      - rabbitmq
+      - mysql19
+      - rabbitmq19
 
-  consumer:
+  consumer19:
     build:
       context: .docker/fpm
       dockerfile: Dockerfile
-    image: hw20/php
-    container_name: php-hw20-consumer
     restart: always
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
@@ -55,12 +49,11 @@ services:
     volumes:
       - ./app:/data
     depends_on:
-      - mysql
-      - rabbitmq
+      - mysql19
+      - rabbitmq19
 
-  rabbitmq:
+  rabbitmq19:
     image: rabbitmq:3.7.7-management-alpine
-    container_name: rabbit-hw20
     restart: always
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
@@ -69,16 +62,15 @@ services:
       - "127.0.0.1:5673:5672"
       - "127.0.0.1:15673:15672"
 
-  mysql:
+  mysql19:
     image: mysql/mysql-server:8.0
-    container_name: mysql-hw20
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     volumes:
-      - data_hw20:/var/lib/mysql
+      - data19:/var/lib/mysql
 
 volumes:
-  data_hw20:
+  data19:

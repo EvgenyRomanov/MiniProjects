@@ -2,7 +2,6 @@
 
 use App\Domain\Repository\ApplicationFormInterface;
 use App\Domain\Repository\StatusInterface;
-use App\Infrastructure\Db\Db;
 use App\Infrastructure\Queues\Publisher\PublisherInterface;
 use App\Infrastructure\Queues\Publisher\RabbitMQPublisher;
 use App\Infrastructure\Repository\RepositoryApplicationFormDb;
@@ -28,14 +27,6 @@ return [
         return $container->get(App::class)->getResponseFactory();
     },
 
-    Db::class => function (ContainerInterface $container) {
-        return $container->get(App::class)->getResponseFactory();
-    },
-
-    PublisherInterface::class => function (ContainerInterface $container) {
-        return new RabbitMQPublisher();
-    },
-
     ApplicationFormInterface::class => function (ContainerInterface $container) {
         return $container->get(RepositoryApplicationFormDb::class);
     },
@@ -56,4 +47,33 @@ return [
             (bool) $settings['log_error_details']
         );
     },
+
+    \Bunny\Client::class => function (ContainerInterface $container) {
+        return new \Bunny\Client([
+            'host'      => 'rabbitmq',
+            'vhost'     => '/',
+            'user'      => $container->get('settings')['RABBITMQ_DEFAULT_USER'],
+            'password'  => $container->get('settings')['RABBITMQ_DEFAULT_PASS'],
+        ]);
+    },
+
+    PublisherInterface::class => function (ContainerInterface $container) {
+        return new RabbitMQPublisher($container->get(\Bunny\Client::class));
+    },
+
+    \PDO::class => function (ContainerInterface $container) {
+        $host = $container->get('settings')['MYSQL_HOST'];
+        $db = $container->get('settings')['MYSQL_DATABASE'];
+        $user = $container->get('settings')['MYSQL_USER'];
+        $password = $container->get('settings')['MYSQL_PASSWORD'];
+
+        $pdo =  new \PDO(
+            "mysql:host={$host};dbname={$db}",
+            $user,
+            $password
+        );
+        $pdo->exec('SET NAMES UTF8');
+
+        return $pdo;
+    }
 ];

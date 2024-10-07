@@ -23,16 +23,11 @@ class RabbitMQConsumer implements ConsumerInterface
     /**
      * @throws Exception
      */
-    public function __construct(ApplicationFormInterface $repositoryApplicationForm, StatusInterface $repositoryStatus)
+    public function __construct(ApplicationFormInterface $repositoryApplicationForm, StatusInterface $repositoryStatus, Client $client)
     {
         $this->repositoryApplicationForm = $repositoryApplicationForm;
         $this->repositoryStatus = $repositoryStatus;
-        $this->client = new Client([
-            'host'      => 'rabbitmq',
-            'vhost'     => '/',
-            'user'      => $_ENV['RABBITMQ_DEFAULT_USER'],
-            'password'  => $_ENV['RABBITMQ_DEFAULT_PASS'],
-        ]);
+        $this->client = $client;
         $this->queue = $_ENV['QUEUE'];
 
         $this->client->connect();

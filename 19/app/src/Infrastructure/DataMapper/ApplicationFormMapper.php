@@ -5,7 +5,6 @@ namespace App\Infrastructure\DataMapper;
 use App\Domain\Entity\ApplicationForm;
 use App\Domain\ValueObject\Email;
 use App\Domain\ValueObject\Message;
-use App\Infrastructure\Db\Db;
 use Exception;
 use PDO;
 use PDOStatement;
@@ -27,12 +26,15 @@ class ApplicationFormMapper
 
     private PDOStatement $deleteStmt;
 
+    private StatusMapper $statusMapper;
+
     /**
      * @throws Exception
      */
-    public function __construct()
+    public function __construct(\PDO $pdo, StatusMapper $statusMapper)
     {
-        $this->pdo = Db::getPdo();
+        $this->pdo = $pdo;
+        $this->statusMapper = $statusMapper;
 
         $this->selectStmt = $this->pdo->prepare(
             "select email, message, status_id from application_form where id = ?"
@@ -67,7 +69,7 @@ class ApplicationFormMapper
             return null;
         }
 
-        $status = (new StatusMapper())->findById($result['status_id']);
+        $status = $this->statusMapper->findById($result['status_id']);
         $applicationForm = new ApplicationForm(
             new Email($result['email']),
             new Message($result['message']),
@@ -94,7 +96,7 @@ class ApplicationFormMapper
         }
 
         foreach ($result as $item) {
-            $status = (new StatusMapper())->findById($item['status_id']);
+            $status = $this->statusMapper->findById($item['status_id']);
             $applicationForm = new ApplicationForm(
                 new Email($item['email']),
                 new Message($item['message']),

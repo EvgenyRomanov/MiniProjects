@@ -16,14 +16,9 @@ class RabbitMQPublisher implements PublisherInterface
     /**
      * @throws Exception
      */
-    public function __construct()
+    public function __construct(Client $client)
     {
-        $this->client = new Client([
-            'host'      => 'rabbitmq',
-            'vhost'     => '/',
-            'user'      => $_ENV['RABBITMQ_DEFAULT_USER'],
-            'password'  => $_ENV['RABBITMQ_DEFAULT_PASS'],
-        ]);
+        $this->client = $client;
         $this->queue = $_ENV['QUEUE'];
 
         $this->client->connect();
