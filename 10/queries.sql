@@ -1,10 +1,19 @@
--- Выбор всех фильмов на сегодня
+-- Выбор всех сегодняшних и грядущих фильмов
 select
     *
 from
     sessions s
 where
     s.start_time >= TO_TIMESTAMP(TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'), 'YYYY-MM-DD');
+
+-- Выбор всех фильмов на сегодня
+select
+    *
+from
+    sessions s
+where
+    s.start_time >= TO_TIMESTAMP(TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'), 'YYYY-MM-DD')
+    AND s.start_time < TO_TIMESTAMP(TO_CHAR(CURRENT_DATE+1, 'YYYY-MM-DD'), 'YYYY-MM-DD');
 
 -- Подсчёт проданных билетов за неделю
 select
@@ -13,6 +22,19 @@ from
     tickets t
 where
     t.created_at between TO_TIMESTAMP(TO_CHAR(CURRENT_DATE-7, 'YYYY-MM-DD'), 'YYYY-MM-DD') and NOW();
+
+-- Формирование афиши (фильмы, которые показывают сегодня и в грядущие дни)
+select
+    m."name" as "название фильма",
+    mg."name" as "жанр",
+    mc."name" as "категория"
+from
+    sessions s
+        join movies m on m.id = s.movie_id
+        join movie_genres mg on mg.id = m.genre_id
+        join movie_categories mc on mc.id = m.category_id
+where
+    s.start_time >= TO_TIMESTAMP(TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'), 'YYYY-MM-DD');
 
 -- Формирование афиши (фильмы, которые показывают сегодня)
 select
@@ -25,7 +47,8 @@ from
     join movie_genres mg on mg.id = m.genre_id
     join movie_categories mc on mc.id = m.category_id
 where
-    s.start_time >= TO_TIMESTAMP(TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'), 'YYYY-MM-DD');
+    s.start_time >= TO_TIMESTAMP(TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'), 'YYYY-MM-DD')
+    AND s.start_time < TO_TIMESTAMP(TO_CHAR(CURRENT_DATE+1, 'YYYY-MM-DD'), 'YYYY-MM-DD');
 
 -- Поиск 3 самых прибыльных фильмов за неделю
 select
