@@ -50,7 +50,7 @@ return [
 
     \Bunny\Client::class => function (ContainerInterface $container) {
         return new \Bunny\Client([
-            'host'      => 'rabbitmq',
+            'host'      => 'rabbitmq19',
             'vhost'     => '/',
             'user'      => $container->get('settings')['RABBITMQ_DEFAULT_USER'],
             'password'  => $container->get('settings')['RABBITMQ_DEFAULT_PASS'],
