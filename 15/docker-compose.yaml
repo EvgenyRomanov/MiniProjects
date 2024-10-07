@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  php:
+  php15:
     build:
       context: .docker
       dockerfile: Dockerfile
@@ -13,14 +13,14 @@ services:
       MYSQL_HOST: ${MYSQL_HOST}
       MYSQL_USER: ${MYSQL_USER}
 
-  mysql:
+  mysql15:
     image: mysql/mysql-server:8.0
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     volumes:
-      - mysqldata:/var/lib/mysql
+      - mysqldata15:/var/lib/mysql
 
 volumes:
-  mysqldata:
+  mysqldata15:

@@ -2,6 +2,6 @@
 
 namespace App\Infrastructure\Events;
 
-class SqlIsExecuted extends Event
+class SqlIsExecuted extends AbstractEventWithQueryResult
 {
 }

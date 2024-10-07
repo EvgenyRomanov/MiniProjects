@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Publisher;
 
-use App\Infrastructure\Events\Event;
+use App\Infrastructure\Events\Interfaces\EventInterface;
 use App\Infrastructure\Subscriber\SubscriberInterface;
 
 class Publisher implements PublisherInterface
@@ -18,13 +18,13 @@ class Publisher implements PublisherInterface
     {
         foreach ($this->subscribers as $k => $v) {
             if ($v === $subscriber) {
+                unset($this->subscribers[$k]);
                 break;
             }
         }
-        unset($k);
     }
 
-    public function notify(Event $event): void
+    public function notify(EventInterface $event): void
     {
         foreach ($this->subscribers as $subscriber) {
             $subscriber->update($event);

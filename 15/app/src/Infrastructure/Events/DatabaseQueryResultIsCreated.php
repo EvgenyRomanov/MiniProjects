@@ -2,6 +2,6 @@
 
 namespace App\Infrastructure\Events;
 
-class DatabaseQueryResultIsCreated extends Event
+class DatabaseQueryResultIsCreated extends AbstractEventWithQueryResult
 {
 }
